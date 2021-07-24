@@ -2,18 +2,79 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="Theme.SmartBank" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.SmartBank" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/blue_gray_500</item>
+        <item name="colorPrimaryVariant">@color/blue_gray_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">@color/oily_200</item>
+        <item name="colorSecondaryVariant">@color/oily_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="materialButtonStyle">@style/ButtonStyle</item>
+        <item name="textInputStyle">@style/TextInputStyle</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Dark" />
+
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:minHeight">45sp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="rippleColor">?attr/colorControlHighlight</item>
+    </style>
+
+    <style name="KeypadButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:minHeight">45sp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="TextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="errorTextAppearance">@style/ErrorTextStyle</item>
+        <item name="errorIconDrawable">@null</item>
+    </style>
+
+    <style name="ErrorTextStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TransactionField">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:paddingEnd">2dp</item>
+        <item name="autoSizeMaxTextSize">16sp</item>
+        <item name="autoSizeMinTextSize">8sp</item>
+        <item name="autoSizeStepGranularity">0.25sp</item>
+        <item name="autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="TransactionField.Label" parent="TransactionField">
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TransactionField.Label.Header" parent="TransactionField.Label">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/blue_gray_500</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TransactionField.Value" parent="TransactionField" />
+
+    <style name="TransactionField.Value.RemainingCycles" parent="TransactionField.Value">
+        <item name="android:textColor">@color/blue_gray_700</item>
     </style>
 
 </resources>

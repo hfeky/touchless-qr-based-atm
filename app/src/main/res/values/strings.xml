@@ -3,4 +3,110 @@
 
     <string name="app_name">Smart Bank</string>
 
+    <!-- Screen Labels -->
+    <string name="label_login">Log In</string>
+    <string name="label_registration">Register</string>
+    <string name="label_home">@string/app_name</string>
+    <string name="label_withdraw">Withdraw</string>
+    <string name="label_deposit">Deposit</string>
+    <string name="label_otp_verification">Verify OTP</string>
+    <string name="label_enter_deposit">Enter Deposit</string>
+    <string name="label_transaction_complete">Transaction Complete</string>
+
+    <!-- Error Messages -->
+    <string name="error_unknown">An unknown error has occurred.</string>
+    <string name="error_network">Failed to connect to the internet.</string>
+    <string name="error_loading">Please wait till data is loaded.</string>
+    <string name="error_field_required">This field is required.</string>
+    <string name="error_invalid_email">This email is not valid.</string>
+    <string name="error_invalid_phone_number">Phone number must be 11 digits long and be a valid one.</string>
+    <string name="error_invalid_credentials">Email address or password is invalid.</string>
+    <string name="error_invalid_amount_range">Amount should be between 10 and 6,000 EGP.</string>
+    <string name="error_invalid_amount_divisibility">Amount should be divisible by 10.</string>
+    <string name="error_unchanged_phone_number">Phone number has not been changed.</string>
+    <string name="error_unchanged_email">Email address has not been changed.</string>
+    <string name="error_password_requirements">Password must be at least 8 characters long and contain at least 3 of the following:\n- 1 Lowercase Character\n- 1 Uppercase Character\n- 1 Number\n- 1 Special Character</string>
+    <string name="error_not_same_password">Password is not the same as the new password entered above.</string>
+    <string name="error_same_password">New password is the same as current password.</string>
+    <string name="error_location_mocked">Your location seems fake. Please do not mock the device location to be able to proceed.</string>
+    <string name="error_no_atm_found_withdraw">You need to stand in front of an ATM to withdraw bank notes.</string>
+    <string name="error_no_atm_found_deposit">You need to stand in front of an ATM to deposit bank notes.</string>
+    <string name="error_device_location_needed_withdraw">Cannot withdraw any bank notes without knowing your location.</string>
+    <string name="error_device_location_needed_deposit">Cannot deposit any bank notes without knowing your location.</string>
+    <string name="error_account_blocked">We detected fraud attempts of making transactions from your account, but we prevented them all. For your own security, we have temporarily blocked your account. Please visit the nearest Smart Bank branch, so that we restore your account.</string>
+    <string name="error_invalid_qr_code">This is not a valid QR code.</string>
+    <string name="error_invalid_atm">You are not located at the correct ATM.</string>
+    <string name="error_expired_qr_code">This QR code is either invalid or has expired.</string>
+    <string name="error_invalid_amount">You do not have enough balance. Please check your balance for more info.</string>
+    <string name="error_expired_transaction">The transaction has already got expired. Please try again.</string>
+    <string name="error_incorrect_otp">The entered OTP was incorrect. Please try again.</string>
+    <string name="error_location_permission_needed_withdraw">Cannot withdraw any bank notes without the location permission.</string>
+    <string name="error_location_permission_needed_deposit">Cannot deposit any bank notes without the location permission.</string>
+    <string name="error_camera_permission_needed">Cannot make a transaction without the camera permission.</string>
+
+    <!-- Rationale Strings -->
+    <string name="rationale_location_permission">Location permission is needed to verify your location with the ATM to be scanned and make the transaction.</string>
+    <string name="rationale_camera_permission">Camera permission is needed to scan the QR code on the ATM screen and make the transaction.</string>
+
+    <!-- Common Strings -->
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+    <string name="proceed">Proceed</string>
+    <string name="settings">Settings</string>
+
+    <!-- Formatted Strings -->
+    <string name="format_welcome">Welcome, %s</string>
+    <string name="format_currency">%s EGP</string>
+    <string name="format_withdrawn_amount">- %s</string>
+    <string name="format_deposited_amount">+ %s</string>
+    <string name="format_atm_transfer">ATM Transfer - %s</string>
+    <string name="format_you_are_now_at">You are now at %s.</string>
+    <string name="format_withdraw_amount">Withdraw %s</string>
+
+    <!-- Login Screen -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+
+    <!-- Home Screen -->
+    <string name="available_balance">Available Balance</string>
+    <string name="time">Time</string>
+    <string name="transaction">Transaction</string>
+    <string name="amount">Amount</string>
+    <string name="no_transactions_yet">You haven\'t made any transaction yet.</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="deposit">Deposit</string>
+
+    <!-- Withdraw Screen -->
+    <string name="enter_amount">Enter Amount</string>
+
+    <!-- Deposit Screen -->
+    <string name="prompt_deposit">You will be asked to scan the QR code shown on the ATM screen, then insert the bank notes into the ATM after OTP verification.</string>
+
+    <!-- QR Code Scanner Screen -->
+    <string name="scan_qr_code">Scan the QR code shown on the ATM screen.</string>
+    <string name="security_notice">Security Notice</string>
+
+    <!-- OTP Verification Screen -->
+    <string name="enter_otp">An OTP has been sent to your device. Please enter the OTP to continue the transaction.</string>
+
+    <!-- Enter Deposit Screen -->
+    <string name="enter_deposit">OTP got verified. Please enter the bank notes into the ATM now.</string>
+    <string name="deposit_confirmation">Deposit Confirmation</string>
+    <string name="message_confirm_deposit">%s have been entered.</string>
+    <string name="confirm">Confirm</string>
+    <string name="deny">Deny</string>
+
+    <!-- Transaction Complete Screen -->
+    <string name="transaction_success">Your transaction has been processed successfully. Your transaction reference number is %s.</string>
+    <string name="transaction_failure">Transaction %s has failed. Please try again.</string>
+    <string name="transaction_expired">Transaction %s has expired. Please try again.</string>
+    <string name="transaction_denied_deposit">Transaction %s has been cancelled for deposit denial. Please try again.</string>
+    <string name="atm_name">ATM</string>
+    <string name="none">None</string>
+
+    <!-- Cancel Transaction Dialog -->
+    <string name="message_cancel_transaction">The ongoing transaction would be canceled.</string>
+
 </resources>

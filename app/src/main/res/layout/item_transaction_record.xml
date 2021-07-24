@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.husseinelfeky.smartbank.binding.DateConverter" />
+
+        <variable
+            name="transactionRecord"
+            type="com.husseinelfeky.smartbank.model.TransactionRecord" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@{DateConverter.dateToString(transactionRecord.timeCompleted)}"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="05/06/2021 15:02:36" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            transactionRecordAmount="@{transactionRecord}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="- 2,000 EGP"
+            tools:textColor="@color/red_600" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@{@string/format_atm_transfer(transactionRecord.atmName)}"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            tools:text="ATM Transfer - El Shorouk ATM" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

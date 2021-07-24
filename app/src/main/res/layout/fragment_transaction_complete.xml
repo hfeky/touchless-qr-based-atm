@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.husseinelfeky.smartbank.binding.DateConverter" />
+
+        <import type="com.husseinelfeky.smartbank.model.TransactionStatus" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="transactionRecord"
+            type="com.husseinelfeky.smartbank.model.TransactionRecord" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_screen_content">
+
+        <ImageView
+            android:id="@+id/iv_transaction_result"
+            transactionStatusImageSrc="@{transactionRecord.status}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/label_transaction_complete"
+            app:layout_constraintBottom_toTopOf="@id/tv_transaction_result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:src="@drawable/ic_transaction_success" />
+
+        <TextView
+            android:id="@+id/tv_transaction_result"
+            transactionStatusText="@{transactionRecord}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/cl_transaction_details"
+            app:layout_constraintTop_toBottomOf="@id/iv_transaction_result"
+            tools:text="@string/transaction_success" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_transaction_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_ok"
+            app:layout_constraintTop_toBottomOf="@id/tv_transaction_result">
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier_labels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="tv_atm_name_label,tv_time_label,tv_amount_label" />
+
+            <TextView
+                android:id="@+id/tv_atm_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/atm_name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_atm_name_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{transactionRecord.atmName}"
+                android:textSize="18sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_atm_name_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@id/barrier_labels"
+                tools:text="El Shorouk ATM" />
+
+            <TextView
+                android:id="@+id/tv_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/time"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_atm_name_value" />
+
+            <TextView
+                android:id="@+id/tv_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{DateConverter.dateToString(transactionRecord.timeCompleted)}"
+                android:textSize="18sp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_time_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@id/barrier_labels"
+                tools:text="05/06/2021 15:02:36" />
+
+            <TextView
+                android:id="@+id/tv_amount_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/amount"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="@{transactionRecord.status == TransactionStatus.SUCCESS ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_time_value" />
+
+            <TextView
+                android:id="@+id/tv_amount_value"
+                transactionRecordAmount="@{transactionRecord}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:visibility="@{transactionRecord.status == TransactionStatus.SUCCESS ? View.VISIBLE : View.GONE}"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_amount_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@id/barrier_labels"
+                tools:text="- 2,000 EGP"
+                tools:textColor="@color/red_600" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cl_transaction_details" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

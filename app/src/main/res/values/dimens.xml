@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="pin_code_box_width">50sp</dimen>
+    <dimen name="pin_code_box_text_size">22sp</dimen>
+    <dimen name="pin_code_box_spacing">4dp</dimen>
+
+    <dimen name="padding_screen_content">20dp</dimen>
+
+</resources>

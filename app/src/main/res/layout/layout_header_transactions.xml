@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50sp">
+
+    <TextView
+        style="@style/TransactionField.Label.Header"
+        android:layout_weight="0.5"
+        android:text="@string/time" />
+
+    <TextView
+        style="@style/TransactionField.Label.Header"
+        android:layout_weight="2.5"
+        android:text="@string/transaction" />
+
+    <TextView
+        style="@style/TransactionField.Label.Header"
+        android:layout_weight="1"
+        android:text="@string/amount" />
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_atm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_500"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="@string/format_you_are_now_at" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_screen_content">
+
+                <Button
+                    android:id="@+id/btn_withdraw_100"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="100 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_withdraw_500"
+                    app:layout_constraintEnd_toStartOf="@id/btn_withdraw_200"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_200"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:text="200 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_withdraw_1000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_withdraw_100"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_500"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="500 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_withdraw_2000"
+                    app:layout_constraintEnd_toStartOf="@id/btn_withdraw_1000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_withdraw_100" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_1000"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="1,000 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_withdraw_3000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_withdraw_500"
+                    app:layout_constraintTop_toBottomOf="@id/btn_withdraw_200" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_2000"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="2,000 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_withdraw_5000"
+                    app:layout_constraintEnd_toStartOf="@id/btn_withdraw_3000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_withdraw_500" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_3000"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="3,000 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_withdraw_6000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_withdraw_2000"
+                    app:layout_constraintTop_toBottomOf="@id/btn_withdraw_1000" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_5000"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="5,000 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/ef_enter_amount"
+                    app:layout_constraintEnd_toStartOf="@id/btn_withdraw_6000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_withdraw_2000" />
+
+                <Button
+                    android:id="@+id/btn_withdraw_6000"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="6,000 EGP"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/ef_enter_amount"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_withdraw_5000"
+                    app:layout_constraintTop_toBottomOf="@id/btn_withdraw_3000" />
+
+                <com.husseinelfeky.smartbank.widget.EditField
+                    android:id="@+id/ef_enter_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_amount"
+                    android:inputType="number"
+                    app:endIconDrawable="@drawable/ic_proceed"
+                    app:endIconMode="custom"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

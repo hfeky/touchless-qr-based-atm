@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LoadingButton">
+        <attr name="android:text" />
+        <attr name="android:enabled" />
+        <attr name="cornerRadius" />
+    </declare-styleable>
+
+    <declare-styleable name="EditField">
+        <attr name="android:hint" />
+        <attr name="android:text" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLength" />
+        <attr name="android:lines" />
+        <attr name="android:enabled" />
+        <attr name="inputEnabled" format="boolean" />
+        <attr name="errorEnabled" format="boolean" />
+        <attr name="endIconMode" />
+        <attr name="endIconDrawable" />
+    </declare-styleable>
+
+    <declare-styleable name="PinCodeView">
+        <attr name="pinBoxesCount" format="integer" />
+        <attr name="keypadType" format="enum">
+            <enum name="deviceKeypad" value="0" />
+            <enum name="customKeypad" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>
