@@ -19,19 +19,25 @@ import java.util.*
  *
  * @return the correct format as a [String] as described above.
  */
-fun Number.formatAsCurrency(context: Context): String {
+fun Number.formatAsCurrency(context: Context, includeCurrency: Boolean = true): String {
     val formatterSymbols = DecimalFormatSymbols(Locale.ENGLISH)
 
     val twoUnitsFormatter = DecimalFormat("#,##0.00", formatterSymbols)
     val twoUnitsString = twoUnitsFormatter.format(this)
 
     // Check if the value can be an integer.
-    return if (twoUnitsString.substring(twoUnitsString.length - 2) == "00") {
+    val result = if (twoUnitsString.substring(twoUnitsString.length - 2) == "00") {
         // The amount can be represented as an integer. Format the amount with no unit.
         val noUnitString = twoUnitsString.substring(0, twoUnitsString.length - 3)
-        context.getString(R.string.format_currency, noUnitString)
+        noUnitString
     } else {
         // The amount is a double. Format the amount with 2 units.
-        context.getString(R.string.format_currency, twoUnitsString)
+        twoUnitsString
+    }
+
+    return if (includeCurrency) {
+        context.getString(R.string.format_currency, result)
+    } else {
+        result
     }
 }

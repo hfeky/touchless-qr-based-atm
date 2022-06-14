@@ -56,9 +56,9 @@
 
     <!-- Formatted Strings -->
     <string name="format_welcome">Welcome, %s</string>
-    <string name="format_currency">%s EGP</string>
-    <string name="format_withdrawn_amount">- %s</string>
-    <string name="format_deposited_amount">+ %s</string>
+    <string name="format_currency">EGP %s</string>
+    <string name="format_withdrawn_amount">EGP -%s</string>
+    <string name="format_deposited_amount">EGP +%s</string>
     <string name="format_atm_transfer">ATM Transfer - %s</string>
     <string name="format_you_are_now_at">You are now at %s.</string>
     <string name="format_withdraw_amount">Withdraw %s</string>

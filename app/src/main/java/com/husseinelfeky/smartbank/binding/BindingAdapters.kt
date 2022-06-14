@@ -18,14 +18,20 @@ fun bindTransactionRecordAmount(textView: TextView, transactionRecord: Transacti
             TransactionType.WITHDRAWAL -> {
                 textView.text = context.getString(
                     R.string.format_withdrawn_amount,
-                    transactionRecord.amount.formatAsCurrency(textView.context)
+                    transactionRecord.amount.formatAsCurrency(
+                        context = textView.context,
+                        includeCurrency = false
+                    )
                 )
                 textView.setTextColor(ContextCompat.getColor(context, R.color.red_600))
             }
             TransactionType.DEPOSIT -> {
                 textView.text = context.getString(
                     R.string.format_deposited_amount,
-                    transactionRecord.amount.formatAsCurrency(textView.context)
+                    transactionRecord.amount.formatAsCurrency(
+                        context = textView.context,
+                        includeCurrency = false
+                    )
                 )
                 textView.setTextColor(ContextCompat.getColor(context, R.color.green_500))
             }
