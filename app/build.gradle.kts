@@ -3,7 +3,7 @@ val fragment = "1.3.5"
 val archLifecycle = "2.3.1"
 val navigationComponent = "2.3.5"
 val playServices = "18.0.0"
-val koin = "3.0.2"
+val koin = "3.2.0"
 
 plugins {
     id("com.android.application")
@@ -15,13 +15,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
-    buildToolsVersion("30.0.3")
+    compileSdk = 31
+    buildToolsVersion = "30.0.3"
 
     defaultConfig {
         applicationId = "com.husseinelfeky.smartbank"
-        minSdkVersion(24)
-        targetSdkVersion(30)
+        minSdk = 24
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
         multiDexEnabled = true
@@ -54,10 +54,10 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-ktx:1.8.0")
 
-    implementation("androidx.appcompat:appcompat:1.3.0")
-    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation("com.google.android.material:material:1.6.1")
 
     implementation("androidx.activity:activity-ktx:$activity")
     implementation("androidx.fragment:fragment-ktx:$fragment")
@@ -74,16 +74,17 @@ dependencies {
     implementation("io.insert-koin:koin-android:$koin")
     testImplementation("io.insert-koin:koin-test-junit4:$koin")
 
-    implementation(platform("com.google.firebase:firebase-bom:28.0.1"))
+    implementation(platform("com.google.firebase:firebase-bom:30.1.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.github.chintan369:Geo-FireStore-Query:1.1.0")
 
     retrofitDependencies(true)
+    implementation("com.google.code.gson:gson:2.9.0")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1")
 
-    implementation("com.journeyapps:zxing-android-embedded:4.2.0")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
     implementation("com.github.harrisonsj:KProgressHUD:1.1")
 

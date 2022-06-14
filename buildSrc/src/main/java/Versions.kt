@@ -5,7 +5,7 @@ object Versions {
 
     // Project Dependencies
     const val gradle = "4.2.1"
-    const val kotlin = "1.5.21"
+    const val kotlin = "1.7.0"
 
     // Coroutines
     const val coroutines = "1.3.9"

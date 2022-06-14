@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         // Android Gradle Build Tools
-        classpath("com.android.tools.build:gradle:4.2.2")
+        classpath("com.android.tools.build:gradle:7.2.1")
 
         // Kotlin Gradle Plugin
         classpath(kotlin("gradle-plugin", version = Versions.kotlin))
@@ -17,7 +17,7 @@ buildscript {
         classpath(Dependencies.Gradle.androidXNavSafeArgs)
 
         // Google Services
-        classpath("com.google.gms:google-services:4.3.8")
+        classpath("com.google.gms:google-services:4.3.10")
     }
 }
 
