@@ -29,10 +29,10 @@
     <string name="error_not_same_password">Password is not the same as the new password entered above.</string>
     <string name="error_same_password">New password is the same as current password.</string>
     <string name="error_location_mocked">Your location seems fake. Please do not mock the device location to be able to proceed.</string>
-    <string name="error_no_atm_found_withdraw">You need to stand in front of an ATM to withdraw bank notes.</string>
-    <string name="error_no_atm_found_deposit">You need to stand in front of an ATM to deposit bank notes.</string>
-    <string name="error_device_location_needed_withdraw">Cannot withdraw any bank notes without knowing your location.</string>
-    <string name="error_device_location_needed_deposit">Cannot deposit any bank notes without knowing your location.</string>
+    <string name="error_no_atm_found_withdraw">You need to stand in front of an ATM to withdraw banknotes.</string>
+    <string name="error_no_atm_found_deposit">You need to stand in front of an ATM to deposit banknotes.</string>
+    <string name="error_device_location_needed_withdraw">Cannot withdraw any banknotes without knowing your location.</string>
+    <string name="error_device_location_needed_deposit">Cannot deposit any banknotes without knowing your location.</string>
     <string name="error_account_blocked">We detected fraud attempts of making transactions from your account, but we prevented them all. For your own security, we have temporarily blocked your account. Please visit the nearest Smart Bank branch, so that we restore your account.</string>
     <string name="error_invalid_qr_code">This is not a valid QR code.</string>
     <string name="error_invalid_atm">You are not located at the correct ATM.</string>
@@ -40,8 +40,8 @@
     <string name="error_invalid_amount">You do not have enough balance. Please check your balance for more info.</string>
     <string name="error_expired_transaction">The transaction has already got expired. Please try again.</string>
     <string name="error_incorrect_otp">The entered OTP was incorrect. Please try again.</string>
-    <string name="error_location_permission_needed_withdraw">Cannot withdraw any bank notes without the location permission.</string>
-    <string name="error_location_permission_needed_deposit">Cannot deposit any bank notes without the location permission.</string>
+    <string name="error_location_permission_needed_withdraw">Cannot withdraw any banknotes without the location permission.</string>
+    <string name="error_location_permission_needed_deposit">Cannot deposit any banknotes without the location permission.</string>
     <string name="error_camera_permission_needed">Cannot make a transaction without the camera permission.</string>
 
     <!-- Rationale Strings -->
@@ -82,7 +82,7 @@
     <string name="enter_amount">Enter Amount</string>
 
     <!-- Deposit Screen -->
-    <string name="prompt_deposit">You will be asked to scan the QR code shown on the ATM screen, then insert the bank notes into the ATM after OTP verification.</string>
+    <string name="prompt_deposit">You will be asked to scan the QR code shown on the ATM screen, then insert the banknotes into the ATM after OTP verification.</string>
 
     <!-- QR Code Scanner Screen -->
     <string name="scan_qr_code">Scan the QR code shown on the ATM screen.</string>
@@ -92,7 +92,7 @@
     <string name="enter_otp">An OTP has been sent to your device. Please enter the OTP to continue the transaction.</string>
 
     <!-- Enter Deposit Screen -->
-    <string name="enter_deposit">OTP got verified. Please enter the bank notes into the ATM now.</string>
+    <string name="enter_deposit">OTP got verified. Please enter the banknotes into the ATM now.</string>
     <string name="deposit_confirmation">Deposit Confirmation</string>
     <string name="message_confirm_deposit">%s have been entered.</string>
     <string name="confirm">Confirm</string>
