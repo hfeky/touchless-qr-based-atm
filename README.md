@@ -1,5 +1,11 @@
 # Touchless Secure QR-based ATM System
 
+[![Paper](https://img.shields.io/badge/Paper-Springer-orange)](https://doi.org/10.1007/978-3-031-20601-6_29)
+[![Conference](https://img.shields.io/badge/Conference-AISI%202022-yellow)](https://link.springer.com/book/10.1007/978-3-031-20601-6)
+![Platform](https://img.shields.io/badge/Platform-Android%20and%20Desktop-brightgreen)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hussein%20El%20Feky-blue)](https://www.linkedin.com/in/hussein-el-feky)
+[![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
+
 This project implements a new touchless secure QR-based ATM system instead of the traditional card-based ATM system, by scanning a QR code shown on the ATM screen to perform withdrawal or deposit transactions without needing to hold the ATM card or touch the ATM touchscreen or keypads at all, minimizing the risk of spreading contagious diseases such as the COVID-19 pandemic while taking various security countermeasures into consideration.
 
 The following sections summarize the system's methodology, but to learn more, you can read [my published paper on Springer](https://doi.org/10.1007/978-3-031-20601-6_29) from the [Proceedings of the 8th International Conference on Advanced Intelligent Systems and Informatics 2022](https://link.springer.com/book/10.1007/978-3-031-20601-6).
